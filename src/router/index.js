@@ -24,6 +24,11 @@ const routes = [
     component: Login
   },
   {
+    path: '/Lw',
+    name: 'Lw',
+    component: Lw
+  },
+  {
     path: '/blog/add',
     name: 'BlogAdd',
     component: BlogEdit,
