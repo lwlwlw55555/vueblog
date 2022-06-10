@@ -23,11 +23,11 @@ const routes = [
     name: 'Login',
     component: Login
   },
-  {
-    path: '/Lw',
-    name: 'Lw',
-    component: Lw
-  },
+  // {
+  //   path: '/Lw',
+  //   name: 'Lw',
+  //   component: Lw
+  // },
   {
     path: '/blog/add',
     name: 'BlogAdd',

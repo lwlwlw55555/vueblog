@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="mcontaner">
     <Header></Header>
 
@@ -72,4 +72,4 @@
     text-align: center;
   }
 
-</style>
+</style> -->
