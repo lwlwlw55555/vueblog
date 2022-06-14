@@ -25,7 +25,7 @@ const routes = [
   },
   {
     path: '/blog/add',
-    name: 'BlogAdd',
+    name: 'BlogEdit',
     component: BlogEdit,
     meta: {
       requireAuth: true
