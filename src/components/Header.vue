@@ -1,6 +1,6 @@
 <template>
   <div class="m-content">
-    <h3>欢迎来到MarkerHub的博客</h3>
+    <h3>欢迎来到Lw的博客</h3>
     <div class="block">
       <el-avatar :size="50" :src="user.avatar"></el-avatar>
       <div>{{ user.username }}</div>
@@ -35,13 +35,13 @@
     methods: {
       logout() {
         const _this = this
-        _this.$axios.get("/web/logout", {
+        _this.$axios.get("/logout", {
           headers: {
             "Authorization": localStorage.getItem("token")
           }
         }).then(res => {
           _this.$store.commit("REMOVE_INFO")
-          _this.$router.push("/web/login")
+          _this.$router.push("/login")
 
         })
       }
