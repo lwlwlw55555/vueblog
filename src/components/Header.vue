@@ -9,10 +9,10 @@
     <div class="maction">
       <span><el-link href="/blogs">主页</el-link></span>
       <el-divider direction="vertical"></el-divider>
-      <span><el-link type="success" href="/blog/add">发表博客</el-link></span>
+      <span><el-link type="success" href="/web/blog/add">发表博客</el-link></span>
 
       <el-divider direction="vertical"></el-divider>
-      <span v-show="!hasLogin"><el-link type="primary" href="/login">登录</el-link></span>
+      <span v-show="!hasLogin"><el-link type="primary" href="/web/login">登录</el-link></span>
 
       <span v-show="hasLogin"><el-link type="danger" @click="logout">退出</el-link></span>
     </div>
@@ -35,13 +35,13 @@
     methods: {
       logout() {
         const _this = this
-        _this.$axios.get("/logout", {
+        _this.$axios.get("/web/logout", {
           headers: {
             "Authorization": localStorage.getItem("token")
           }
         }).then(res => {
           _this.$store.commit("REMOVE_INFO")
-          _this.$router.push("/login")
+          _this.$router.push("/web/login")
 
         })
       }
