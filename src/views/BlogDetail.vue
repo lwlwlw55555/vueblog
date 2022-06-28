@@ -1,6 +1,8 @@
 <template>
   <div>
+    <DateRange></DateRange>
     <Header></Header>
+
 
     <div class="mblog">
       <h2> {{ blog.title }}</h2>
@@ -20,6 +22,7 @@
 <script>
   import 'github-markdown-css'
   import Header from "../components/Header";
+  import DateRange from "../views/lw/DateRange";
 
   export default {
     name: "BlogDetail.vue",

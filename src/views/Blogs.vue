@@ -34,6 +34,7 @@
 
 <script>
   import Header from "../components/Header";
+  import DateRange from "../views/lw/DateRange";
 
   export default {
     name: "Blogs.vue",
