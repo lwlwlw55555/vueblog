@@ -302,6 +302,11 @@
                                 row['shop2'] = data['oms'][i]['shopNick'];
                                 row['num2'] = data['oms'][i]['count'];
                             }
+                            // console.log(row['num'],"fhihishfiahsifh")
+                            if (row['num'] === undefined && row['num1'] === undefined && row['num2'] === undefined) {
+                                break;
+                            }
+                            // console.log(row, "hfahifah")
                             _this.topNData.push(row)
                         }
                         console.log(_this.topNData)
