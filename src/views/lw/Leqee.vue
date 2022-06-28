@@ -95,6 +95,12 @@
                     :cell-style="{textAlign:'center'}"
                     border>
                 <el-table-column
+                        prop="no"
+                        label="no"
+                        width="40"
+                >
+                </el-table-column>
+                <el-table-column
                         prop="platform"
                         label="平台"
                         width="60"
@@ -109,7 +115,7 @@
                 <el-table-column
                         prop="num"
                         label="数量"
-                        width="100"
+                        width="90"
                 >
                 </el-table-column>
                 <el-table-column
@@ -127,7 +133,7 @@
                 <el-table-column
                         prop="num1"
                         label="数量"
-                        width="100"
+                        width="90"
                 >
 
                 </el-table-column>
@@ -146,7 +152,7 @@
                 <el-table-column
                         prop="num2"
                         label="数量"
-                        width="100"
+                        width="90"
                 >
                 </el-table-column>
             </el-table>
@@ -280,6 +286,7 @@
                         for (let i = 0; i < _this.ssyTopN.topN; i++) {
                             // console.log(data,"lwlwl2")
                             let row = [];
+                            row['no'] = i + 1;
                             if (data['sync'][i] != null) {
                                 row['platform'] = 'sync'
                                 row['shop'] = data['sync'][i]['shopNick'];
@@ -327,7 +334,7 @@
 
     .m-table2 {
         /*max-width: 660px;*/
-        max-width: 931px;
+        max-width: 941px;
         margin: 0 auto;
         text-align: center;
         /*font-style: #4cae4c;*/
