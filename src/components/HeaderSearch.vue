@@ -108,7 +108,7 @@
             diaoduNew() {
                 // window.open("http://121.40.113.153/leqee_xxl.php");
                 let routeData = this.$router.resolve({
-                    path: '/leqeeXxl',
+                    path: '/web/leqeeXxl',
                 });
                 window.open(routeData.location.path, "_blank");
             },
