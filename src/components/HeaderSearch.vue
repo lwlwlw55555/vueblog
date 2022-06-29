@@ -3,14 +3,17 @@
         <el-form :model="formHead" :rules="headRules" :inline="true" ref="formHead" size="mini"
                  style="text-align: center;">
             <el-form-item>
-                <el-button class="el-button--lw" type="primary" @click="diaodu()">调度</el-button>
-<!--                <el-link type="primary" href="http://121.40.113.153/leqee_xxl.php">调度</el-link>-->
+                <el-button class="el-button--lw-new-diaodu" type="primary" @click="diaoduNew()">调度</el-button>
+                <el-button class="el-button--lw" type="primary" @click="diaodu()">调度(老)</el-button>
+                <!--                <el-link type="primary" href="http://121.40.113.153/leqee_xxl.php">调度</el-link>-->
             </el-form-item>
             <el-form-item label="内贸token" prop="innerToken">
-                <el-input v-model="formHead.innerToken" placeholder="内贸token" style="width: 200px;" clearable transfer></el-input>
+                <el-input v-model="formHead.innerToken" placeholder="内贸" style="width: 190px;" clearable
+                          transfer></el-input>
             </el-form-item>
             <el-form-item label="观云长token" prop="outerToken">
-                <el-input v-model="formHead.outerToken" placeholder="观云长token" style="width: 200px;" clearable transfer></el-input>
+                <el-input v-model="formHead.outerToken" placeholder="观云长" style="width: 190px;" clearable
+                          transfer></el-input>
             </el-form-item>
             <el-form-item>
                 <el-button type="primary" @click="search()">查询</el-button>
@@ -18,8 +21,8 @@
                 <el-button @click="reset('formHead')">重置</el-button>
             </el-form-item>
         </el-form>
-<!--        <div class="lw_boder">-->
-<!--        </div>-->
+        <!--        <div class="lw_boder">-->
+        <!--        </div>-->
         <LwBordor></LwBordor>
 
         <!--        <el-skeleton :rows="3" animated/>-->
@@ -102,6 +105,13 @@
             diaodu() {
                 window.open("http://121.40.113.153/leqee_xxl.php");
             },
+            diaoduNew() {
+                // window.open("http://121.40.113.153/leqee_xxl.php");
+                let routeData = this.$router.resolve({
+                    path: '/leqeeXxl',
+                });
+                window.open(routeData.location.path, "_blank");
+            },
             search() {
                 const _this = this
                 this.$http_php.get("/leqee_refresh_token.php", {
@@ -163,6 +173,21 @@
     .el-button--lw:active {
         background: #20B2AA;
         border-color: #20B2AA;
+        color: #fff;
+    }
+
+    .el-button--lw-new-diaodu {
+        color: #FFF;
+        background-color: #e50404;
+        border-color: #e50404;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, .50), 0 0 6px rgba(0, 0, 0, .50);
+        border-radius: 3px;
+    }
+
+    .el-button--lw-new-diaodu:focus,
+    .el-button--lw-new-diaodu:hover {
+        background: #e307c6;
+        border-color: #e307c6;
         color: #fff;
     }
 

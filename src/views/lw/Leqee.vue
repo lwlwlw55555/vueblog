@@ -96,64 +96,57 @@
                     border>
                 <el-table-column
                         prop="no"
-                        label="no"
-                        width="40"
+                        label="排序"
+                        width="70"
                 >
                 </el-table-column>
                 <el-table-column
-                        prop="platform"
-                        label="平台"
-                        width="60"
+                        label="sync"
                 >
+                    <el-table-column
+                            prop="shop"
+                            label="店铺"
+                            width="200"
+                    >
+                    </el-table-column>
+                    <el-table-column
+                            prop="num"
+                            label="数量"
+                            width="90"
+                    >
+                    </el-table-column>
                 </el-table-column>
                 <el-table-column
-                        prop="shop"
-                        label="店铺"
-                        width="150"
+                        label="origin"
                 >
+                    <el-table-column
+                            prop="shop1"
+                            label="店铺"
+                            width="200"
+                    >
+                    </el-table-column>
+                    <el-table-column
+                            prop="num1"
+                            label="数量"
+                            width="90"
+                    >
+                    </el-table-column>
                 </el-table-column>
                 <el-table-column
-                        prop="num"
-                        label="数量"
-                        width="90"
+                        label="oms"
                 >
-                </el-table-column>
-                <el-table-column
-                        prop="platform1"
-                        label="平台"
-                        width="60"
-                >
-                </el-table-column>
-                <el-table-column
-                        prop="shop1"
-                        label="店铺"
-                        width="150"
-                >
-                </el-table-column>
-                <el-table-column
-                        prop="num1"
-                        label="数量"
-                        width="90"
-                >
-
-                </el-table-column>
-                <el-table-column
-                        prop="platform2"
-                        label="平台"
-                        width="60"
-                >
-                </el-table-column>
-                <el-table-column
-                        prop="shop2"
-                        label="店铺"
-                        width="150"
-                >
-                </el-table-column>
-                <el-table-column
-                        prop="num2"
-                        label="数量"
-                        width="90"
-                >
+                    <el-table-column
+                            prop="shop2"
+                            label="店铺"
+                            width="200"
+                    >
+                    </el-table-column>
+                    <el-table-column
+                            prop="num2"
+                            label="数量"
+                            width="90"
+                    >
+                    </el-table-column>
                 </el-table-column>
             </el-table>
         </div>
