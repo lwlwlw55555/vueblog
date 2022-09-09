@@ -12,6 +12,7 @@ import TableEdit from '../views/lw/TableEdit.vue'
 import DateFix from '../views/lw/DateFix.vue'
 import Shop from '../views/lw/Shop.vue'
 import LeqeeXxl from '../views/lw/LeqeeXxl.vue'
+import DeControl from '../views/de/DeControl.vue'
 
 Vue.use(VueRouter)
 
@@ -91,7 +92,13 @@ const routes = [
         path: '/leqeeXxl',
         name: 'LeqeeXxl',
         component: LeqeeXxl
+    },
+    {
+        path: '/de/deControl',
+        name: 'DeControl',
+        component: DeControl
     }
+
 ]
 
 const router = new VueRouter({
