@@ -75,7 +75,7 @@
                 const _this = this
                 this.$http_php.get("/de_control.php").then(res => {
                     console.log(res.data)
-                    if (res.data.code === 0) {
+                    if (res.data.code === 0 && res.data.data.control_status != null) {
                         _this.deControl.radio = res.data.data.control_status;
                     } else {
                         _this.$alert('操作失败:' + JSON.stringify(res.data), '提示', {
