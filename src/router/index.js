@@ -97,8 +97,12 @@ const routes = [
         path: '/de/deControl',
         name: 'DeControl',
         component: DeControl
+    },
+    {
+        path: '/de',
+        name: 'DeControl',
+        component: DeControl
     }
-
 ]
 
 const router = new VueRouter({
