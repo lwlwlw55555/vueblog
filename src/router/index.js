@@ -13,6 +13,7 @@ import DateFix from '../views/lw/DateFix.vue'
 import Shop from '../views/lw/Shop.vue'
 import LeqeeXxl from '../views/lw/LeqeeXxl.vue'
 import DeControl from '../views/de/DeControl.vue'
+import DpProps from '../views/dp/DpProps.vue'
 
 Vue.use(VueRouter)
 
@@ -102,6 +103,11 @@ const routes = [
         path: '/de',
         name: 'DeControl',
         component: DeControl
+    },
+    {
+        path: '/dp',
+        name: 'DpProps',
+        component: DpProps
     }
 ]
 
