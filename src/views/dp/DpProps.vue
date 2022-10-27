@@ -3,7 +3,7 @@
         <div>
             <h3 style="text-align: center">dp-LW Private Server Props</h3>
             <LwBordor></LwBordor>
-            <el-form ref="dpProps" :inline="true" :model="dpProps" size="medium" style="text-align: center;">
+            <el-form ref="dpProps" :inline="true" :model="dpProps" :rules="headRules" size="medium" style="text-align: center;">
 
                 <el-form-item label="TCP" prop="TCP">
                     <el-input v-model="dpProps.TCP" placeholder="TCP" style="width: 245px;" clearable
@@ -36,6 +36,14 @@
                 dpProps: {
                     TCP: '',
                     HTTP: ''
+                },
+                headRules: {
+                    TCP: [
+                        {required: true, message: '请输入TCP', trigger: 'blur'},
+                    ],
+                    HTTP: [
+                        {required: true, message: '请输入HTTP', trigger: 'blur'},
+                    ]
                 }
             };
         },
