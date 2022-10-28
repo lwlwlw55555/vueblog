@@ -3,7 +3,8 @@
 
     <el-container>
       <el-header>
-        <img class="mlogo" src="https://www.markerhub.com/dist/images/logo/markerhub-logo.png" alt="">
+<!--        <img class="mlogo" src="https://www.markerhub.com/dist/images/logo/markerhub-logo.png" alt="">-->
+          <img class="mlogo" src="../images/login.png" alt="">
       </el-header>
       <el-main>
         <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
@@ -82,10 +83,11 @@
 
 <style scoped>
   .el-header, .el-footer {
-    background-color: #B3C0D1;
+    /*background-color: #B3C0D1;*/
     color: #333;
     text-align: center;
     line-height: 60px;
+      /*left: 30px;*/
   }
 
   .el-aside {
@@ -116,8 +118,10 @@
   }
 
   .mlogo {
-    height: 60%;
-    margin-top: 10px;
+    height: 118%;
+      margin-left: 90px;
+      /*width: 100%;*/
+    /*margin-top: 10px;*/
   }
 
   .demo-ruleForm {
