@@ -3,6 +3,7 @@
     <h3>欢迎来到Lw的博客</h3>
     <div class="block">
       <el-avatar :size="50" :src="user.avatar"></el-avatar>
+<!--        <el-avatar :size="50" :src="../../public/static/icon/01.ico"></el-avatar>-->
       <div>{{ user.username }}</div>
     </div>
 
