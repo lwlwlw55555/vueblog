@@ -17,6 +17,7 @@
                 <el-form-item>
                     <el-button type="primary" @click="onSubmit('dpProps')" size="mini">提交</el-button>
                     <el-button type="primary" @click="reStart()" size="mini">重启</el-button>
+                    <el-button type="primary" @click="stop()" size="mini">停止</el-button>
                 </el-form-item>
             </el-form>
         </div>
@@ -102,6 +103,31 @@
                         });
                     } else {
                         _this.$alert('重启失败:' + JSON.stringify(res.data), '提示', {
+                            confirmButtonText: '确定',
+                            callback: action => {
+                                // _this.$router.push("/blogs")
+                            }
+                        });
+                    }
+                })
+            },
+            stop(){
+                const _this = this
+                this.$http_php.get("/dp_props.php", {
+                    params: {
+                        "stop": true
+                    }
+                }).then(res => {
+                    console.log(res.data)
+                    if (res.data.code === 0) {
+                        _this.$alert('停止成功', '提示', {
+                            confirmButtonText: '确定',
+                            callback: action => {
+                                // _this.$router.push("/blogs")
+                            }
+                        });
+                    } else {
+                        _this.$alert('停止失败:' + JSON.stringify(res.data), '提示', {
                             confirmButtonText: '确定',
                             callback: action => {
                                 // _this.$router.push("/blogs")
