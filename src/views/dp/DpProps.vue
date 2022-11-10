@@ -4,6 +4,9 @@
             <h3 style="text-align: center">dp-LW Private Server Props</h3>
             <LwBordor></LwBordor>
             <el-form ref="dpProps" :inline="true" :model="dpProps" :rules="headRules" size="medium" style="text-align: center;">
+                <el-form-item>
+                    <el-button class="el-button--lw-cpolar" @click="cpolar()" size="mini">cpolar</el-button>
+                </el-form-item>
 
                 <el-form-item label="TCP" prop="TCP">
                     <el-input v-model="dpProps.TCP" placeholder="TCP" style="width: 245px;" clearable
@@ -20,7 +23,9 @@
                     <el-button type="primary" @click="stop()" size="mini">停止</el-button>
                 </el-form-item>
             </el-form>
+
         </div>
+
     </div>
 </template>
 
@@ -58,8 +63,8 @@
                         const _this = this
                         this.$http_php.get("/dp_props.php", {
                             params: {
-                                "BI-EB-URL": this.dpProps.HTTP,
-                                "BI-DB-URL": this.dpProps.TCP
+                                "BI-EB-URL": this.dpProps.HTTP.trim(),
+                                "BI-DB-URL": this.dpProps.TCP.trim()
                             }
                         }).then(res => {
                             console.log(res.data)
@@ -152,6 +157,9 @@
                         });
                     }
                 })
+            },
+            cpolar() {
+                window.open("https://dashboard.cpolar.com/status");
             }
         },
         created() {
@@ -190,7 +198,7 @@
         color: #fff;
     }
 
-    .el-button--lw-new-diaodu {
+    .el-button--lw-cpolar {
         color: #FFF;
         background-color: #e50404;
         border-color: #e50404;
@@ -198,8 +206,8 @@
         border-radius: 3px;
     }
 
-    .el-button--lw-new-diaodu:focus,
-    .el-button--lw-new-diaodu:hover {
+    .el-button--lw-cpolar:focus,
+    .el-button--lw-cpolar:hover {
         background: #e307c6;
         border-color: #e307c6;
         color: #fff;
