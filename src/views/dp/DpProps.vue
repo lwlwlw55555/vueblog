@@ -7,6 +7,9 @@
                 <el-form-item>
                     <el-button class="el-button--lw-cpolar" @click="cpolar()" size="mini">cpolar</el-button>
                 </el-form-item>
+                <el-form-item>
+                    <el-button class="el-button--lw" @click="dp()" size="mini">dp</el-button>
+                </el-form-item>
 
                 <el-form-item label="TCP" prop="TCP">
                     <el-input v-model="dpProps.TCP" placeholder="TCP" style="width: 245px;" clearable
@@ -160,6 +163,9 @@
             },
             cpolar() {
                 window.open("https://dashboard.cpolar.com/status");
+            },
+            dp() {
+                window.open("http://121.40.113.153/dp");
             }
         },
         created() {
@@ -198,6 +204,21 @@
         color: #fff;
     }
 
+    .el-button--lw:focus,
+    .el-button--lw:hover {
+        background: #48D1CC;
+        border-color: #48D1CC;
+        color: #fff;
+    }
+
+    .el-button--lw {
+        color: #FFF;
+        background-color: #20B2AA;
+        border-color: #20B2AA;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, .50), 0 0 6px rgba(0, 0, 0, .50);
+        border-radius: 3px;
+    }
+
     .el-button--lw-cpolar {
         color: #FFF;
         background-color: #e50404;
@@ -219,15 +240,6 @@
         border-color: #48D1CC;
         color: #fff;
     }
-
-    .el-button--lw {
-        color: #FFF;
-        background-color: #20B2AA;
-        border-color: #20B2AA;
-        box-shadow: 0 3px 3px rgba(0, 0, 0, .50), 0 0 6px rgba(0, 0, 0, .50);
-        border-radius: 3px;
-    }
-
 
     .m-content {
         max-width: 960px;
