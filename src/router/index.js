@@ -104,7 +104,7 @@ const routes = [
     {
         path: '/de',
         name: 'DeGiftIgnore',
-        component: DeControl
+        component: DeGiftIgnore
     },
     {
         path: '/dp',

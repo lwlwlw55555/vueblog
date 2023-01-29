@@ -1,7 +1,7 @@
 <template>
     <div>
         <HeaderSearch></HeaderSearch>
-        <h3 style="text-align: center">Leqee XXL 调度</h3>
+        <h3 style="text-align: center">调度</h3>
         <el-form-item>
             <el-button type="primary" @click="onSubmit('ssyForm')">查询</el-button>
         </el-form-item>
