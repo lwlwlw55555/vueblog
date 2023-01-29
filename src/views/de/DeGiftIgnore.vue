@@ -8,7 +8,8 @@
         <el-form :model="outerIdForm" ref="outerIdForm" size="medium" class="demo-dynamic" style="text-align: center;">
 
             <el-form-item>
-                <el-button class="el-button--lw" size="small" @click.prevent="refreshOuterId(outerId)">刷新</el-button>
+                <el-button class="el-button--lw" size="small" @click.prevent="refreshOuterId()">刷新</el-button>
+                <el-button class="el-button--lw_submit" size="small" @click.prevent="exportOuterId()">导出</el-button>
             </el-form-item>
 
             <el-form-item class="el-form-item__label-lw"
@@ -85,6 +86,37 @@
                     }
                 })
             },
+            exportOuterId() {
+                this.$http_php({
+                    method: 'get',
+                    url: "/de_gift_ignore.php",
+                    params: {"is_export": true},
+                    responseType: 'blob'
+                }).then(function (response) {
+                    // let loadingInstance = Loading.service({target: document.body});
+                    // this.$nextTick(() => { // 以服务的方式调用的 Loading 需要异步关闭
+                    //     loadingInstance.close();
+                    // });
+                    console.log(response)
+                    var fileURL = window.URL.createObjectURL(new Blob([response.data]));
+                    var fileLink = document.createElement('a');
+
+                    fileLink.href = fileURL;
+                    console.log(response.headers)
+                    /*
+                   todo
+                    中文名乱码后端找了一下午找不到问题
+                    从前端找找啊啊啊啊！
+                    前端这里可以打印出来所有的header啊啊啊啊啊啊啊
+                    在这里用decodeURI一下不就可以把后端转的urlcode转为中文了吗.....
+                    反正前端肯定是认识urlcode的！！！！
+                     */
+                    fileLink.setAttribute('download', decodeURI(response.headers['filename']));
+                    document.body.appendChild(fileLink);
+
+                    fileLink.click();
+                })
+            },
             addOuterId() {
                 this.outerIdForm.outerIds.push({
                     value: '',
@@ -98,7 +130,7 @@
                 }
             },
             submitOuterId(outerIdForm) {
-                console.log(this.$refs,"this.$refs")
+                console.log(this.$refs, "this.$refs")
                 this.$refs['outerIdForm'].validate((valid) => {
                     if (valid) {
                         const _this = this
