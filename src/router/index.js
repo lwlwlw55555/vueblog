@@ -13,7 +13,9 @@ import DateFix from '../views/lw/DateFix.vue'
 import Shop from '../views/lw/Shop.vue'
 import LeqeeXxl from '../views/lw/LeqeeXxl.vue'
 import DeControl from '../views/de/DeControl.vue'
+import DeGiftIgnore from '../views/de/DeGiftIgnore.vue'
 import DpProps from '../views/dp/DpProps.vue'
+import AddDomain from '../views/lw/AddDomain.vue'
 
 Vue.use(VueRouter)
 
@@ -101,13 +103,23 @@ const routes = [
     },
     {
         path: '/de',
-        name: 'DeControl',
+        name: 'DeGiftIgnore',
         component: DeControl
     },
     {
         path: '/dp',
         name: 'DpProps',
         component: DpProps
+    },
+    {
+        path: '/de/deGiftIgnore',
+        name: 'DeGiftIgnore',
+        component: DeGiftIgnore
+    },
+    {
+        path: '/AddDomain',
+        name: 'AddDomain',
+        component: AddDomain
     }
 ]
 
