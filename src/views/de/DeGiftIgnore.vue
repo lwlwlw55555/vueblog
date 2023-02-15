@@ -9,7 +9,8 @@
 
             <el-form-item>
                 <el-button class="el-button--lw" size="small" @click.prevent="refreshOuterId()">刷新</el-button>
-                <el-button class="el-button--lw_submit" size="small" @click.prevent="exportOuterId()">导出</el-button>
+                <!-- ③ 按钮动画 :loading="loading.listloading" -->
+                <el-button class="el-button--lw_submit" size="small" :loading="loading.listloading" @click.prevent="exportOuterId()">导出</el-button>
             </el-form-item>
 
             <el-form-item class="el-form-item__label-lw"
@@ -53,6 +54,10 @@
                     outerIds: [{
                         value: ''
                     }],
+                },
+                // ③ 按钮动画
+                loading :{
+                    listloading: false
                 }
             };
         },
@@ -87,12 +92,33 @@
                 })
             },
             exportOuterId() {
+                // ② 全局+字
+                // const loading = this.$loading({
+                //     lock: true,
+                //     text: '正在导出',
+                //     spinner: "el-icon-loading",
+                //     background: 'raba(0, 0, 0, 0.7)'
+                // });
+                // ③ 按钮动画
+                this.loading.listloading = true;
+                this.$message({
+                    type: "warning",
+                    message:"数据正在导出，请耐心等待"
+                });
+
+                //!important 如果要在下面的函数中用结构体this 必须先把this赋予变量 结构体中调用_this!!!!
+                const _this = this
+
                 this.$http_php({
                     method: 'get',
                     url: "/de_gift_ignore.php",
                     params: {"is_export": true},
                     responseType: 'blob'
                 }).then(function (response) {
+                    // ② 全局+字
+                    // loading.close();
+
+                    // ① 全局+转圈
                     // let loadingInstance = Loading.service({target: document.body});
                     // this.$nextTick(() => { // 以服务的方式调用的 Loading 需要异步关闭
                     //     loadingInstance.close();
@@ -115,6 +141,13 @@
                     document.body.appendChild(fileLink);
 
                     fileLink.click();
+                    // ③ 按钮动画
+                    _this.loading.listloading = false;
+                    _this.$message({
+                        type: "success",
+                        duration: 10000,
+                        message: "操作成功"
+                    });
                 })
             },
             addOuterId() {
