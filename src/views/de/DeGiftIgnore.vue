@@ -145,7 +145,7 @@
                     _this.loading.listloading = false;
                     _this.$message({
                         type: "success",
-                        duration: 10000,
+                        duration: 1000,
                         message: "操作成功"
                     });
                 })
