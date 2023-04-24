@@ -24,7 +24,7 @@ const routes = [
     {
         path: '/',
         name: 'Index',
-        redirect: {name: "LeqeeXxl"}
+        redirect: {name: "DeUpload"}
     },
     {
         path: '/blogs',
