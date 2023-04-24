@@ -38,6 +38,15 @@ const http_php = axios.create({
 })
 Vue.prototype.$http_php = http_php
 
+const http_java = axios.create({
+  timeout: 10000 * 12,
+  baseURL: "http://121.40.113.153/do_mdd",
+  headers: {
+    'X-Requested-With': 'XMLHttpRequest'
+  }
+})
+Vue.prototype.$http_java = http_java
+
 // Vue.dateutil = dateutil
 
 // export {dateutil}

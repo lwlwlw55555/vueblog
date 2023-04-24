@@ -14,6 +14,7 @@ import Shop from '../views/lw/Shop.vue'
 import LeqeeXxl from '../views/lw/LeqeeXxl.vue'
 import DeControl from '../views/de/DeControl.vue'
 import DeGiftIgnore from '../views/de/DeGiftIgnore.vue'
+import DeUpload from '../views/de/DeUpload.vue'
 import DpProps from '../views/dp/DpProps.vue'
 import AddDomain from '../views/lw/AddDomain.vue'
 
@@ -100,6 +101,11 @@ const routes = [
         path: '/de/deControl',
         name: 'DeControl',
         component: DeControl
+    },
+    {
+        path: '/de',
+        name: 'DeUpload',
+        component: DeUpload
     },
     {
         path: '/de',
