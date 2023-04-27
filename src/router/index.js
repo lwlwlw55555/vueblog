@@ -108,7 +108,7 @@ const routes = [
         component: DeUpload
     },
     {
-        path: '/de',
+        path: '/gift',
         name: 'DeGiftIgnore',
         component: DeGiftIgnore
     },
