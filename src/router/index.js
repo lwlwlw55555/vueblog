@@ -15,6 +15,8 @@ import LeqeeXxl from '../views/lw/LeqeeXxl.vue'
 import DeControl from '../views/de/DeControl.vue'
 import DeGiftIgnore from '../views/de/DeGiftIgnore.vue'
 import DeUpload from '../views/de/DeUpload.vue'
+import DeOrder from '../views/de/DeOrder.vue'
+import LwJson from '../views/lw/LwJson.vue'
 import DpProps from '../views/dp/DpProps.vue'
 import AddDomain from '../views/lw/AddDomain.vue'
 
@@ -111,6 +113,16 @@ const routes = [
         path: '/gift',
         name: 'DeGiftIgnore',
         component: DeGiftIgnore
+    },
+    {
+        path: '/order',
+        name: 'DeOrder',
+        component: DeOrder
+    },
+    {
+        path: '/json',
+        name: 'LwJson',
+        component: LwJson
     },
     {
         path: '/dp',

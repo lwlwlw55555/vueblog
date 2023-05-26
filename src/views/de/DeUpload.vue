@@ -73,6 +73,9 @@
             };
         },
         methods: {
+           // todo el-upload上传文件携带额外参数
+
+           //todo see https://blog.csdn.net/weixin_46361114/article/details/129916362
             submitUpload() {
                 this.$refs.upload.submit();
             },

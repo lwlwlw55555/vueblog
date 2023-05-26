@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 import Element from 'element-ui'
 import axios from 'axios'
-
+import JsonViewer from 'vue-json-viewer'
 import mavonEditor from 'mavon-editor'
 
 import "element-ui/lib/theme-chalk/index.css"
@@ -24,6 +24,7 @@ Vue.use(directives)
 
 Vue.use(Element)
 Vue.use(mavonEditor)
+Vue.use(JsonViewer)
 // Vue.use(dateutil)
 
 Vue.config.productionTip = false
