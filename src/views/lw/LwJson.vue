@@ -169,7 +169,7 @@
     .el-button--lw:active {
         background: #20B2AA;
         border-color: #20B2AA;
-        color: #fff;
+        color: #122b40;
     }
 
     .el-button--lw-new-diaodu {
@@ -191,11 +191,11 @@
     .el-button--lw:hover {
         background: #48D1CC;
         border-color: #48D1CC;
-        color: #fff;
+        color: #122b40;
     }
 
     .el-button--lw {
-        color: #FFF;
+        color: #122b40;
         background-color: #20B2AA;
         border-color: #20B2AA;
         box-shadow: 0 3px 3px rgba(0, 0, 0, .50), 0 0 6px rgba(0, 0, 0, .50);
@@ -203,7 +203,7 @@
     }
 
     .el-button--lw_add {
-        color: #FFF;
+        color: #122b40;
         background-color: #5688c4;
         border-color: #5688c4;
         box-shadow: 0 3px 3px rgba(0, 0, 0, .50), 0 0 6px rgba(0, 0, 0, .50);
