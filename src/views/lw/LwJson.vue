@@ -9,13 +9,21 @@
                  :inline="true"
                  style="text-align: center;">
             <el-form-item title="JSON" prop="textarea">
-                <el-input
-                        type="textarea"
-                        :rows="5"
-                        style="width: 750px;font-size: 19px"
-                        placeholder="请输入内容"
-                        v-model="jsonForm.textarea">
-                </el-input>
+<!--                <el-input-->
+<!--                        type="textarea" show-word-limit-->
+<!--                        :rows="5"-->
+<!--                        style="width: 750px;font-size: 19px"-->
+<!--                        placeholder="请输入内容"-->
+<!--                        v-model="jsonForm.textarea">-->
+<!--                </el-input>-->
+<!--                <b-code-editor v-model="jsonForm.textarea" :auto-format="true" :smart-indent="true" theme="idea" :indent-unit="40"-->
+<!--                               :line-wrap="true" :lint="false" style="width: 100000px" ref="editor"></b-code-editor>-->
+                <b-code-editor v-model="jsonForm.textarea" :lint="false" :autoFormat="false" :lineWrap="false" :auto-format="true" :smart-indent="true"
+                               theme="material" style="width:760px;max-block-size: 760px;text-align: left" :indent-unit="4"
+                               :line-wrap="false" ref="editor">
+
+                </b-code-editor>
+                <!--                :lint="false"-->
             </el-form-item>
             <br>
             <el-form-item>
@@ -28,7 +36,7 @@
                     <el-button type="text" @click="copyClick()">复制报文</el-button>
                 </el-form-item>
                 <json-viewer boxed class="el-button--lw" copyable
-                             style="text-align: left; width: 750px;background: #fcf8e3;"
+                             style="text-align: left; width: 760px;background: #fcf8e3;"
                              :value="jsonResult" sort expanded>
                 </json-viewer>
             </el-form-item>
@@ -140,7 +148,12 @@
         //     this.refreshOuterId();
         // }
     }
+
+
+
+
 </script>
+
 
 <style scoped>
     .lw_boder {
