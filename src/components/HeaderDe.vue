@@ -1,7 +1,7 @@
 <template>
     <div class="m-content">
         <el-form :model="formHead" :inline="true" ref="formHead" size="small"
-                 style="text-align: center; margin-top: 20px">
+                 style="text-align: center; margin-top: 10px;margin-bottom: -20px">
             <el-form-item>
                 <el-button class="el-button--upload" type="primary" @click="de()">订单录入</el-button>
                 <el-button class="el-button--gift" type="primary" @click="gift()">赠品设置</el-button>
