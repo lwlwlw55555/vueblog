@@ -1,5 +1,6 @@
 <template>
     <div>
+        <HeaderDe></HeaderDe>
         <div>
             <h3 style="text-align: center">DE电商-U1对接订单报文查看</h3>
             <LwBordor></LwBordor>
@@ -73,11 +74,13 @@
     import LwBordor from "@/views/lw/LwBordor";
     import {Loading} from 'element-ui';
     import JsonViewer from 'vue-json-viewer'
+    import HeaderDe from "../../components/HeaderDe";
 
     export default {
         components: {
             LwBordor,
-            JsonViewer
+            JsonViewer,
+            HeaderDe
         },
         name: "DeOrder",
         data() {

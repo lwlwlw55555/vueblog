@@ -1,5 +1,6 @@
 <template>
     <div>
+        <HeaderDe></HeaderDe>
         <div>
             <h3 style="text-align: center">DE电商-U1对接订单数据导入</h3>
             <LwBordor></LwBordor>
@@ -55,11 +56,13 @@
 <script>
     import LwBordor from "@/views/lw/LwBordor";
     import {Loading} from 'element-ui';
+    import HeaderDe from "../../components/HeaderDe";
 
 
     export default {
         components: {
-            LwBordor
+            LwBordor,
+            HeaderDe
         },
         data() {
             return {
