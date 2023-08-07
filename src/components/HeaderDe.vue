@@ -6,6 +6,7 @@
                 <el-button class="el-button--upload" type="primary" @click="de()">订单录入</el-button>
                 <el-button class="el-button--gift" type="primary" @click="gift()">赠品设置</el-button>
                 <el-button class="el-button--lw" type="primary" @click="order()">报文查看</el-button>
+                <el-button class="el-button--shuadan" type="primary" @click="shuadan()">刷单录入</el-button>
             </el-form-item>
         </el-form>
         <!--        <div class="lw_boder">-->
@@ -58,6 +59,13 @@
                 // window.open("http://121.40.113.153/leqee_xxl.php");
                 let routeData = this.$router.resolve({
                     path: '/web/order',
+                });
+                window.open(routeData.location.path, "_blank");
+            },
+            shuadan() {
+                // window.open("http://121.40.113.153/leqee_xxl.php");
+                let routeData = this.$router.resolve({
+                    path: '/web/shuadan',
                 });
                 window.open(routeData.location.path, "_blank");
             }
@@ -137,6 +145,21 @@
         color: #FFF;
         background-color: #20B2AA;
         border-color: #20B2AA;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, .50), 0 0 6px rgba(0, 0, 0, .50);
+        border-radius: 3px;
+    }
+
+    .el-button--shuadan:focus,
+    .el-button--shuadan:hover {
+        background: #b91ed9;
+        border-color: #b91ed9;
+        color: #fff;
+    }
+
+    .el-button--shuadan {
+        color: #FFF;
+        background-color: #da7eec;
+        border-color: #da7eec;
         box-shadow: 0 3px 3px rgba(0, 0, 0, .50), 0 0 6px rgba(0, 0, 0, .50);
         border-radius: 3px;
     }

@@ -16,6 +16,7 @@ import DeControl from '../views/de/DeControl.vue'
 import DeGiftIgnore from '../views/de/DeGiftIgnore.vue'
 import DeUpload from '../views/de/DeUpload.vue'
 import DeOrder from '../views/de/DeOrder.vue'
+import DeShuadan from '../views/de/DeShuadan.vue'
 import LwJson from '../views/lw/LwJson.vue'
 import DpProps from '../views/dp/DpProps.vue'
 import AddDomain from '../views/lw/AddDomain.vue'
@@ -118,6 +119,11 @@ const routes = [
         path: '/order',
         name: 'DeOrder',
         component: DeOrder
+    },
+    {
+        path: '/shuadan',
+        name: 'DeShuadan',
+        component: DeShuadan
     },
     {
         path: '/json',
