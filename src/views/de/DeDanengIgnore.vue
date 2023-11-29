@@ -68,7 +68,7 @@
             refreshOuterId() {
                 const _this = this
                 Loading.service({target: document.body});
-                this.$http_php.get("/de_gift_ignore.php").then(res => {
+                this.$http_php.get("/de_daneng_ignore.php").then(res => {
                     let loadingInstance = Loading.service({target: document.body});
                     this.$nextTick(() => { // 以服务的方式调用的 Loading 需要异步关闭
                         loadingInstance.close();
@@ -114,7 +114,7 @@
 
                 this.$http_php({
                     method: 'get',
-                    url: "/de_gift_ignore.php",
+                    url: "/de_daneng_ignore.php",
                     params: {"is_export": true},
                     responseType: 'blob'
                 }).then(function (response) {
@@ -180,7 +180,7 @@
                         console.log(danengOuterIdList, "value")
                         // console.log(outerIdForm, "lwwlww")
                         // console.log(outerIdForm.outerIds, "lwwlww")
-                        this.$http_php.get("/de_gift_ignore.php", {
+                        this.$http_php.get("/de_daneng_ignore.php", {
                             params: {
                                 danengOuterIdList: danengOuterIdList
                             }
