@@ -20,6 +20,7 @@ import DeShuadan from '../views/de/DeShuadan.vue'
 import LwJson from '../views/lw/LwJson.vue'
 import DpProps from '../views/dp/DpProps.vue'
 import AddDomain from '../views/lw/AddDomain.vue'
+import DeDanengIgnore from '../views/de/DeDanengIgnore.vue'
 
 Vue.use(VueRouter)
 
@@ -141,9 +142,14 @@ const routes = [
         component: DeGiftIgnore
     },
     {
-        path: '/AddDomain',
-        name: 'AddDomain',
-        component: AddDomain
+        path: '/de/deGiftIgnore',
+        name: 'DeGiftIgnore',
+        component: DeGiftIgnore
+    },
+    {
+        path: '/de/deDanengIgnore',
+        name: 'DeDanengIgnore',
+        component: DeDanengIgnore
     }
 ]
 
