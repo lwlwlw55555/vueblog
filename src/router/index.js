@@ -142,9 +142,9 @@ const routes = [
         component: DeGiftIgnore
     },
     {
-        path: '/de/deGiftIgnore',
-        name: 'DeGiftIgnore',
-        component: DeGiftIgnore
+        path: '/daneng',
+        name: 'DeDanengIgnore',
+        component: DeDanengIgnore
     },
     {
         path: '/de/deDanengIgnore',
