@@ -5,7 +5,7 @@
             <el-form-item>
                 <el-button class="el-button--lw-new-diaodu" type="primary" @click="diaoduNew()">调度</el-button>
                 <el-button class="el-button--lw" type="primary" @click="diaodu()">调度(老)</el-button>
-                <!--                <el-link type="primary" href="http://121.40.113.153/leqee_xxl.php">调度</el-link>-->
+                <!--                <el-link type="primary" href="http://47.98.252.4/leqee_xxl.php">调度</el-link>-->
             </el-form-item>
             <el-form-item label="内贸token" prop="innerToken">
                 <el-input v-model="formHead.innerToken" placeholder="内贸" style="width: 190px;" clearable
@@ -103,10 +103,10 @@
                 this.$refs[formHead].resetFields();
             },
             diaodu() {
-                window.open("http://121.40.113.153/leqee_xxl.php");
+                window.open("http://47.98.252.4/leqee_xxl.php");
             },
             diaoduNew() {
-                // window.open("http://121.40.113.153/leqee_xxl.php");
+                // window.open("http://47.98.252.4/leqee_xxl.php");
                 let routeData = this.$router.resolve({
                     path: '/web/leqeeXxl',
                 });

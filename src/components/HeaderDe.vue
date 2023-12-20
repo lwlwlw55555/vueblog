@@ -42,28 +42,28 @@
         },
         methods: {
             de() {
-                // window.open("http://121.40.113.153/leqee_xxl.php");
+                // window.open("http://47.98.252.4/leqee_xxl.php");
                 let routeData = this.$router.resolve({
                     path: '/web/de',
                 });
                 window.open(routeData.location.path, "_blank");
             },
             gift() {
-                // window.open("http://121.40.113.153/leqee_xxl.php");
+                // window.open("http://47.98.252.4/leqee_xxl.php");
                 let routeData = this.$router.resolve({
                     path: '/web/gift',
                 });
                 window.open(routeData.location.path, "_blank");
             },
             order() {
-                // window.open("http://121.40.113.153/leqee_xxl.php");
+                // window.open("http://47.98.252.4/leqee_xxl.php");
                 let routeData = this.$router.resolve({
                     path: '/web/order',
                 });
                 window.open(routeData.location.path, "_blank");
             },
             shuadan() {
-                // window.open("http://121.40.113.153/leqee_xxl.php");
+                // window.open("http://47.98.252.4/leqee_xxl.php");
                 let routeData = this.$router.resolve({
                     path: '/web/shuadan',
                 });

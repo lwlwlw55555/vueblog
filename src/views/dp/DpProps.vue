@@ -165,7 +165,7 @@
                 window.open("https://dashboard.cpolar.com/status");
             },
             dp() {
-                window.open("http://121.40.113.153/dp");
+                window.open("http://47.98.252.4/dp");
             }
         },
         created() {
