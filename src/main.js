@@ -34,7 +34,7 @@ Vue.prototype.$axios = axios
 
 const http_php = axios.create({
   timeout: 10000 * 12,
-  baseURL: "http://121.40.113.153",
+  baseURL: "http://47.98.252.4",
   headers: {
     'X-Requested-With': 'XMLHttpRequest'
   }
@@ -43,7 +43,7 @@ Vue.prototype.$http_php = http_php
 
 const http_java = axios.create({
   timeout: 10000 * 12,
-  baseURL: "http://121.40.113.153/do_mdd",
+  baseURL: "http://47.98.252.4/do_mdd",
   headers: {
     'X-Requested-With': 'XMLHttpRequest'
   }
